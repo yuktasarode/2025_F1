@@ -1,4 +1,4 @@
-# 🏎️ F1 Race Result Predictor
+# 🏎️ F1 Race Result Predictor using MLP/NN
 
 This project uses machine learning to predict Formula 1 race outcomes using historical data, live telemetry, qualifying performance, and weather forecasts. It simulates the upcoming 2025 Grand Prix races by predicting race times for each driver and ranking them accordingly.
 This project takes inspiration from [mar-antaya](https://github.com/mar-antaya/2025_f1_predictions).
