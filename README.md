@@ -1,15 +1,16 @@
 # 🏎️ F1 Race Result Predictor
 
-This project uses machine learning to predict Formula 1 race outcomes using historical data, live telemetry, qualifying performance, and weather forecasts. It simulates the upcoming 2025 Grand Prix races — starting with Monaco — by predicting race times for each driver and ranking them accordingly.
+This project uses machine learning to predict Formula 1 race outcomes using historical data, live telemetry, qualifying performance, and weather forecasts. It simulates the upcoming 2025 Grand Prix races by predicting race times for each driver and ranking them accordingly.
+This project takes inspiration from [mar-antaya](https://github.com/mar-antaya/2025_f1_predictions).
 
 ## 🔍 Project Highlights
 
 - Combines **FastF1 API**, **2024 race data**, and **2025 qualifying results**
 - Integrates **live weather forecasts** via OpenWeather API
-- Models include both [**Gradient Boosting**](https://github.com/mar-antaya/2025_f1_predictions)
- and **PyTorch neural networks**
+- Model included **PyTorch neural networks**
 - Prioritizes **low MAE** and **podium stability** across runs
 - Predicts full driver race rankings and identifies the expected race winner
+- Calculates average position change between qualifying and race finish for deeper performance insights
 
 ---
 
@@ -35,11 +36,11 @@ This project uses machine learning to predict Formula 1 race outcomes using hist
 2. **Feature Engineering**
    - Aggregates mean sector times
    - Calculates team performance score from constructor points
-   - Maps average position change at Monaco
+   - Maps average position change 
    - Merges clean air pace, qualifying time, and weather into features
 
 3. **Model Training**
-   - Baseline: `GradientBoostingRegressor` from scikit-learn
+   - Baseline: `GradientBoostingRegressor` implementation from [mar-antaya](https://github.com/mar-antaya/2025_f1_predictions)
    - Custom: `PyTorch` MLP with dropout, tuning, and evaluation
 
 4. **Prediction & Evaluation**
